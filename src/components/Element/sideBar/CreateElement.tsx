@@ -9,8 +9,8 @@ import { Label } from '../../ui/label';
 const CreateElement = () => {
   return (
     <div>
+      <h2 className=' pb-2 pl-4 font-semibold '>Add New</h2>
       <div className='py-4'>
-        <h2 className=' pb-5 pl-4'>Add New</h2>
         <Label className='border-[#4F46E5] border-b-4 p-4'>Elements</Label>
       </div>
       <Accordion type='single' collapsible>

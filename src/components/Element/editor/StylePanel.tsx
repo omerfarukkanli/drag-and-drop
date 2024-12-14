@@ -61,7 +61,10 @@ const StylePanel = ({ selectedElement, onUpdateElement }: StylePanelProps) => {
   };
 
   return (
-    <div className='w-1/4 bg-gray-100 pt-4 border-r'>
+    <div className='w-1/4 bg-gray-100 py-4 border-r'>
+      <h2 className=' pb-2 pl-4 font-semibold'>
+        {selectedElement ? selectedElement.type : 'No element selected'}
+      </h2>
       <div className='py-2 border-b'>
         <Label className='border-[#4F46E5] border-b-4 py-2 px-4'>Style</Label>
       </div>
