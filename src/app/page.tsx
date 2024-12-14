@@ -3,9 +3,10 @@ import { getDefaultProperties } from '@/lib/element-util';
 import { DndContext, DragEndEvent } from '@dnd-kit/core';
 import { useState } from 'react';
 import { Element, ElementType, ElemnentProperties } from '@/types/element';
-import { Canvas } from '@/components/Element/editor/Canvas';
-import { StylePanel } from '@/components/Element/editor/StypePanel';
+import Canvas from '@/components/Element/editor/Canvas';
+
 import ElementContainer from '@/components/Element/sideBar/ElementContainer';
+import StylePanel from '@/components/Element/editor/StylePanel';
 
 export default function Home() {
   const [elements, setElements] = useState<Element[]>([]);

@@ -8,7 +8,7 @@ interface LayerProps {
   setElements: (element: Element[]) => void;
 }
 
-export default function Layer({ elements, setElements }: LayerProps) {
+const Layer = ({ elements, setElements }: LayerProps) => {
   const handleRemoveElement = (elementId: string) => {
     setElements(elements.filter((el) => el.id !== elementId));
   };
@@ -22,7 +22,7 @@ export default function Layer({ elements, setElements }: LayerProps) {
 
   return (
     <div>
-      <h2 className='bg-white border-y p-2 font-bold'>Layers</h2>
+      <h2 className='bg-white border-y p-2 px-4 font-bold'>Layers</h2>
       {elements.map((element, index) => (
         <div
           key={'layer-' + index}
@@ -32,7 +32,7 @@ export default function Layer({ elements, setElements }: LayerProps) {
           )}
         >
           {elementIcons[element.type] && (
-            <div className='flex items-center gap-2'>
+            <div className='flex items-center gap-2 px-2'>
               {React.createElement(elementIcons[element.type].icon, {
                 className: 'h-4 w-4 text-gray-500',
               })}
@@ -51,4 +51,6 @@ export default function Layer({ elements, setElements }: LayerProps) {
       ))}
     </div>
   );
-}
+};
+
+export default Layer;

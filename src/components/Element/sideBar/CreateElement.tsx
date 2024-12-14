@@ -1,5 +1,5 @@
 import React from 'react';
-import { DraggableElement } from './DraggableElement';
+import DraggableElement from './DraggableElement';
 import { Type, Image, Video, Heading } from 'lucide-react';
 
 import { Accordion, AccordionItem, AccordionTrigger } from '../../ui/accordion';
@@ -9,12 +9,13 @@ import { Label } from '../../ui/label';
 const CreateElement = () => {
   return (
     <div>
-      <div className='py-2'>
-        <Label className='border-[#4F46E5] border-b-4 p-2'>Elements</Label>
+      <div className='py-4'>
+        <h2 className=' pb-5 pl-4'>Add New</h2>
+        <Label className='border-[#4F46E5] border-b-4 p-4'>Elements</Label>
       </div>
       <Accordion type='single' collapsible>
         <AccordionItem value='header'></AccordionItem>
-        <AccordionItem value='item-1' className='px-2'>
+        <AccordionItem value='item-1' className='px-4'>
           <AccordionTrigger className='hover:no-underline'>
             Typography
           </AccordionTrigger>
@@ -33,7 +34,7 @@ const CreateElement = () => {
             />
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value='item-2' className='px-2'>
+        <AccordionItem value='item-2' className='px-4'>
           <AccordionTrigger className='hover:no-underline'>
             Media
           </AccordionTrigger>

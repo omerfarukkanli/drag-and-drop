@@ -3,7 +3,7 @@ interface ElementRendererProps {
   element: Element;
 }
 
-export const ElementRenderer = ({ element }: ElementRendererProps) => {
+const ElementRenderer = ({ element }: ElementRendererProps) => {
   switch (element.type) {
     case 'heading':
       return (
@@ -75,3 +75,5 @@ export const ElementRenderer = ({ element }: ElementRendererProps) => {
       return null;
   }
 };
+
+export default ElementRenderer;

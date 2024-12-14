@@ -14,10 +14,7 @@ interface StylePanelProps {
   onUpdateElement: (element: Element) => void;
 }
 
-export const StylePanel = ({
-  selectedElement,
-  onUpdateElement,
-}: StylePanelProps) => {
+const StylePanel = ({ selectedElement, onUpdateElement }: StylePanelProps) => {
   const handleTextChange = (value: string) => {
     if (
       selectedElement?.type === 'heading' ||
@@ -196,3 +193,5 @@ export const StylePanel = ({
     </div>
   );
 };
+
+export default StylePanel;

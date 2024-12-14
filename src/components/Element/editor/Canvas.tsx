@@ -1,6 +1,6 @@
 import { useDroppable } from '@dnd-kit/core';
-import { ElementRenderer } from './ElementRenderer';
 import { Element } from '../../../types/element';
+import ElementRenderer from './ElementRenderer';
 
 interface CanvasProps {
   elements: Element[];
@@ -8,7 +8,7 @@ interface CanvasProps {
   onSelectElement: (element: Element) => void;
 }
 
-export const Canvas = ({
+const Canvas = ({
   elements,
   selectedElement,
   onSelectElement,
@@ -49,3 +49,5 @@ export const Canvas = ({
     </div>
   );
 };
+
+export default Canvas;

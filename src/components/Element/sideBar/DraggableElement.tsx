@@ -9,11 +9,7 @@ interface DraggableElementProps {
   label: string;
 }
 
-export const DraggableElement = ({
-  type,
-  icon,
-  label,
-}: DraggableElementProps) => {
+const DraggableElement = ({ type, icon, label }: DraggableElementProps) => {
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
     id: `new-${type}`,
     data: { type },
@@ -34,3 +30,5 @@ export const DraggableElement = ({
     </div>
   );
 };
+
+export default DraggableElement;
